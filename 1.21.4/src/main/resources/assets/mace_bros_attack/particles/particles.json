@@ -1,0 +1,17 @@
+{
+  "textures": [
+    "mace_bros_attack:dtok",
+    "mace_bros_attack:dt_good",
+    "mace_bros_attack:dt_great",
+    "mace_bros_attack:dt_excellent",
+    "mace_bros_attack:remake_ok",
+    "mace_bros_attack:remake_good",
+    "mace_bros_attack:remake_great",
+    "mace_bros_attack:remake_excellent",
+    "mace_bros_attack:insidestory_ok",
+    "mace_bros_attack:insidestory_good",
+    "mace_bros_attack:insidestory_great",
+    "mace_bros_attack:insidestory_excellent",
+    "mace_bros_attack:sparkle_particle_texture"
+  ]
+}
