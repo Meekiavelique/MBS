@@ -1,0 +1,101 @@
+{
+  "dt_ok": {
+    "subtitle": "subtitles.dt_ok",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:bis_ok",
+        "stream": false
+      }
+    ]
+  },
+  "dt_good": {
+    "subtitle": "subtitles.dt_good",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:bis_good",
+        "stream": false
+      }
+    ]
+  },
+  "dt_great": {
+    "subtitle": "subtitles.dt_great",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:bis_great",
+        "stream": false
+      }
+    ]
+  },
+  "dt_excellent": {
+    "subtitle": "subtitles.dt_excellent",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:bis_excellent",
+        "stream": false
+      }
+    ]
+  },
+  "remake_ok": {
+    "subtitle": "subtitles.remake_ok",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:remake_ok",
+        "stream": false
+      }
+    ]
+  },
+  "remake_good": {
+    "subtitle": "subtitles.remake_good",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:remake_good",
+        "stream": false
+      }
+    ]
+  },
+  "remake_great": {
+    "subtitle": "subtitles.remake_great",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:remake_great",
+        "stream": false
+      }
+    ]
+  },
+  "remake_excellent": {
+    "subtitle": "subtitles.remake_excellent",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:remake_excellent",
+        "stream": false
+      }
+    ]
+  },
+  "is_ok": {
+    "subtitle": "subtitles.is_ok",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:insidestory-good",
+        "stream": false
+      }
+    ]
+  },
+  "is_great": {
+    "subtitle": "subtitles.is_great",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:insidestory-great",
+        "stream": false
+      }
+    ]
+  },
+  "is_excellent": {
+    "subtitle": "subtitles.is_excellent",
+    "sounds": [
+      {
+        "name": "mace_bros_attack:insidestory-excellent",
+        "stream": false
+      }
+    ]
+  }
+}

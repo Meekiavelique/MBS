@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "mbsport",
+  "version": "1.0.0",
+  "name": "Mace Bros Attack",
+  "description": "Adds sound effects and particles for consecutive mace attacks with wind burst enchantment",
+  "authors": [
+    "meekdev"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/mbsport/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.meekdev.mbsport.Mbsport"
+    ],
+    "client": [
+      "com.meekdev.mbsport.client.MbsportClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": "*",
+    "minecraft": ">=1.21.1 <1.22",
+    "java": ">=21"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
