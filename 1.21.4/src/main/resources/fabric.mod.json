@@ -1,12 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "mbsport",
-  "version": "${version}",
+  "version": "1.0.0",
   "name": "MBSport",
   "description": "combo mod lol",
-  "authors": [
-    "meekdev"
-  ],
+  "authors": ["meekdev"],
   "contact": {
     "homepage": "https://github.com/meekdev/mbsport",
     "sources": "https://github.com/meekdev/mbsport"
@@ -15,23 +13,15 @@
   "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.meekdev.mbsport.Mbsport"
-    ],
-    "client": [
-      "com.meekdev.mbsport.client.MbsportClient"
-    ],
-    "modmenu": [
-      "com.meekdev.mbsport.client.ModMenuIntegration"
-    ]
+    "main": ["com.meekdev.mbsport.Mbsport"],
+    "client": ["com.meekdev.mbsport.client.MbsportClient"],
+    "modmenu": ["com.meekdev.mbsport.client.ModMenuIntegration"]
   },
-  "mixins": [
-    "mbsport.mixins.json"
-  ],
+  "mixins": ["mbsport.mixins.json"],
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.16.9",
     "fabric": "*",
-    "minecraft": "${minecraft_version}",
+    "minecraft": ">=1.21.4 <1.22",
     "java": ">=21"
   },
   "suggests": {

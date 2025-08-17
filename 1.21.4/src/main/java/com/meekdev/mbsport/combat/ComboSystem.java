@@ -8,8 +8,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.AxeItem;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.sound.SoundCategory;
@@ -99,8 +97,12 @@ public class ComboSystem {
 
     private ComboType getComboType(ItemStack weapon) {
         if (weapon.isOf(Items.MACE)) return ComboType.MACE;
-        if (weapon.getItem() instanceof SwordItem) return ComboType.SWORD;
-        if (weapon.getItem() instanceof AxeItem) return ComboType.AXE;
+
+        String itemId = Registries.ITEM.getId(weapon.getItem()).toString();
+
+        if (itemId.contains("sword")) return ComboType.SWORD;
+        if (itemId.contains("axe")) return ComboType.AXE;
+
         return ComboType.NONE;
     }
 
@@ -112,10 +114,9 @@ public class ComboSystem {
         if (soundEvent != null) {
             try {
                 float pitch = Math.min(1.0f + ((hits - 1) * config.getPitchIncrement()), config.getMaxPitch());
-                player.getWorld().playSound(player, player.getBlockPos(), soundEvent, SoundCategory.PLAYERS, 1.0f, pitch);
+                player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), soundEvent, SoundCategory.PLAYERS, 1.0f, pitch, 0L);
             } catch (Exception e) {
-                // Fallback sound
-                player.getWorld().playSound(player, player.getBlockPos(), net.minecraft.sound.SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                player.getWorld().playSound(null, player.getX(), player.getY(), player.getZ(), net.minecraft.sound.SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 1.0f, 1.0f, 0L);
             }
         }
 
@@ -155,7 +156,6 @@ public class ComboSystem {
             }
 
         } catch (Exception e) {
-            // Return fallback particle
         }
 
         return ParticleTypes.CRIT;
@@ -181,7 +181,6 @@ public class ComboSystem {
             }
 
         } catch (Exception e) {
-            // Return null for fallback handling
         }
 
         return null;

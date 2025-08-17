@@ -2,8 +2,8 @@ package com.meekdev.mbsport.config;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.AxeItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 
 public class ComboConfig {
 
@@ -41,8 +41,12 @@ public class ComboConfig {
 
     public boolean isWeaponEnabled(ItemStack stack) {
         if (stack.isOf(Items.MACE)) return enableMaceCombo;
-        if (stack.getItem() instanceof SwordItem) return enableSwordCombo;
-        if (stack.getItem() instanceof AxeItem) return enableAxeCombo;
+
+        String itemId = Registries.ITEM.getId(stack.getItem()).toString();
+
+        if (itemId.contains("sword")) return enableSwordCombo;
+        if (itemId.contains("axe")) return enableAxeCombo;
+
         return false;
     }
 
